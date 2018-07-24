@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         rootDatabaseReference = firebaseDatabase.getReference();
 
         // TODO: Task 3 - Add a value event listener to the "message" node
-        rootDatabaseReference.child("message").addValueEventListener(new ValueEventListener() {
+        rootDatabaseReference.child("message/today").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method will get fired everytime the "message" value updates in the realtime database. We're getting our data back as a DataSnapshot
